@@ -14,13 +14,10 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    // розпарсимо значення JSON.parse зі сховища запис localStorage.getItem з ключем contacts.
     const contacts = JSON.parse(localStorage.getItem("contacts"));
-    //Якщо contacts
     if (contacts?.length) {
-      // = contacts && contacts.length or contacts.length !== 0
       this.setState({
-        contacts, // == contacts : contacts
+        contacts,
       });
     }
   }
